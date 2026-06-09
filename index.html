@@ -1,185 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santhosh G | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial;
-            background: #0f172a;
-            color: #e2e8f0;
-        }
+<title>Santhosh G | Embedded Engineer</title>
 
-        .container {
-            width: 85%;
-            margin: auto;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid #38bdf8;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
 
-        h1 {
-            margin-top: 10px;
-            font-size: 32px;
-        }
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(15,23,42,0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
 
-        h2 {
-            color: #38bdf8;
-            border-bottom: 2px solid #1e293b;
-            padding-bottom: 5px;
-        }
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        .section {
-            margin: 40px 0;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    animation: fadeIn 2s ease;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            transition: transform 0.2s;
-        }
+.hero img {
+    width: 160px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    margin-bottom: 20px;
+}
 
-        .card:hover {
-            transform: scale(1.02);
-        }
+.hero h1 {
+    font-size: 42px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.hero p {
+    color: #94a3b8;
+    margin: 10px 0;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #38bdf8;
-            color: black;
-            padding: 6px 10px;
-            margin: 5px;
-            border-radius: 6px;
-            font-size: 13px;
-        }
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #94a3b8;
-        }
-    </style>
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 10%;
+    animation: slideUp 1s ease;
+}
+
+/* CARDS */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 6px;
+    background: #020617;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+</style>
+
 </head>
+
 <body>
 
-<header class="container">
-    <img src="empty.img" alt="Profile Photo">
+<!-- NAVBAR -->
+<nav>
+    <div><b>Santhosh G</b></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="empty.img">
     <h1>Santhosh G</h1>
-    <p>Senior Embedded Software Engineer | RISC-V | Linux | Yocto</p>
-</header>
+    <p>Senior Embedded Software Engineer | RISC-V | Yocto | Linux</p>
 
-<div class="container">
-
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>
-            Embedded Software Engineer with 5+ years of experience in RISC-V platform bring-up,
-            Linux/RTOS development, bootloader customization, and Yocto integration.
-            Strong in debugging across firmware, kernel, and system layers.
-        </p>
+    <div>
+        <a class="btn" href="#">Download Resume</a>
+        <a class="btn" href="https://github.com/santhoshg007">GitHub</a>
     </div>
+</div>
 
-    <div class="section">
-        <h2>Core Skills</h2>
-        <div class="skills">
-            <span>C / C++</span>
-            <span>Linux</span>
-            <span>Yocto</span>
-            <span>U-Boot</span>
-            <span>RISC-V</span>
-            <span>PCIe</span>
-            <span>NVMe</span>
-            <span>Shell Scripting</span>
-            <span>Driver Development</span>
-        </div>
-    </div>
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>About Me</h2>
+<p>
+Embedded Software Engineer with 5+ years of experience in RISC-V platform bring-up,
+bootloader development, Linux kernel debugging, and Yocto integration.
+Strong expertise in low-level system debugging across firmware, bootloader, and kernel layers.
+</p>
+</div>
 
-    <div class="section">
-        <h2>Experience</h2>
+<!-- SKILLS -->
+<div class="section" id="skills">
+<h2>Technical Skills</h2>
 
-        <div class="card">
-            <h3>Tessolve Semiconductor</h3>
-            <p><b>Senior Software Engineer (Aug 2025 – Present)</b></p>
-            <ul>
-                <li>RISC-V platform bring-up & debugging</li>
-                <li>Bootloader and Linux driver development</li>
-                <li>Performance validation using CoreMark & stress-ng</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>Hero Electronix</h3>
-            <p><b>Associate Software Engineer (Jan 2025 – Aug 2025)</b></p>
-            <ul>
-                <li>OTA updates and middleware development</li>
-                <li>GPS & sensor debugging</li>
-                <li>Triple camera integration</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>SureSoft Systems</h3>
-            <p><b>Associate Software Engineer (Jul 2021 – Jan 2025)</b></p>
-            <ul>
-                <li>WebKit browser integration</li>
-                <li>Secure boot & upgrader design</li>
-                <li>Embedded system debugging</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="section">
-        <h2>Key Projects</h2>
-
-        <div class="card">
-            <h3>RISC-V Platform Bring-up</h3>
-            <p>U-Boot porting, PCIe NVMe boot, Yocto integration, low-level debugging.</p>
-        </div>
-
-        <div class="card">
-            <h3>Dash Camera System</h3>
-            <p>OTA updates, sensor debugging, multi-camera system integration.</p>
-        </div>
-
-        <div class="card">
-            <h3>WebKit Browser</h3>
-            <p>HbbTV support, MSE playback, multi-instance browser.</p>
-        </div>
-
-    </div>
-
-    <div class="section">
-        <h2>Education</h2>
-        <div class="card">
-            <p><b>B.E – Electrical & Electronics Engineering</b></p>
-            <p>University College of Engineering, Panruti (2021)</p>
-        </div>
-    </div>
+<div class="skills">
+<span>C</span>
+<span>C++</span>
+<span>Linux</span>
+<span>Yocto</span>
+<span>U-Boot</span>
+<span>RISC-V</span>
+<span>PCIe</span>
+<span>NVMe</span>
+<span>Shell</span>
+<span>Driver Development</span>
+</div>
 
 </div>
 
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+<h2>Experience</h2>
+
+<div class="card">
+<h3>Tessolve Semiconductor</h3>
+<p><b>Senior Software Engineer (2025–Present)</b></p>
+<ul>
+<li>RISC-V platform bring-up and early boot debugging</li>
+<li>U-Boot customization, PCIe/NVMe integration</li>
+<li>Performance validation using CoreMark & stress-ng</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Hero Electronix</h3>
+<p><b>Associate Software Engineer (2025)</b></p>
+<ul>
+<li>OTA updates and middleware development</li>
+<li>Sensor debugging (GPS & G-sensor)</li>
+<li>Multi-camera system integration</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>SureSoft Systems</h3>
+<p><b>Associate Software Engineer (2021–2025)</b></p>
+<ul>
+<li>WebKit browser integration (HbbTV, MSE)</li>
+<li>Secure boot and upgrader implementation</li>
+<li>Rendering and playback debugging</li>
+</ul>
+</div>
+
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+<h2>Key Projects</h2>
+
+<div class="card">
+<h3>RISC-V Platform Bring-up</h3>
+<p>U-Boot porting, PCIe NVMe boot, Yocto integration, and system-level debugging.</p>
+</div>
+
+<div class="card">
+<h3>Dash Camera System</h3>
+<p>OTA updates, sensor integration, and triple camera implementation.</p>
+</div>
+
+<div class="card">
+<h3>WebKit Browser</h3>
+<p>HbbTV lifecycle, MSE playback, and multi-instance browser support.</p>
+</div>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
-    © 2026 Santhosh G | Embedded Systems Portfolio
+© 2026 Santhosh G | Embedded Systems Portfolio
 </footer>
 
 </body>
 </html>
+``
